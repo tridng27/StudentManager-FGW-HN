@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Enrollments - Student Manager{% endblock %}
+
+{% block body %}
+    <h1>Enrollments</h1>
+    
+    <a href="{{ path('enrollment_new') }}" class="btn btn-success">+ New Enrollment</a>
+    
+    {% if enrollments|length > 0 %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th>Course</th>
+                    <th>Enrollment Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for enrollment in enrollments %}
+                    <tr>
+                        <td>{{ enrollment.student.fullName }}</td>
+                        <td>{{ enrollment.course.title }}</td>
+                        <td>{{ enrollment.enrollmentDate|date('M d, Y') }}</td>
+                        <td>{{ enrollment.status }}</td>
+                        <td>
+                            <form method="POST" action="{{ path('enrollment_drop', {'id': enrollment.id}) }}" style="display: inline;">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Drop this course?')">Drop</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No enrollments found. <a href="{{ path('enrollment_new') }}">Create one</a></p>
+    {% endif %}
+{% endblock %}

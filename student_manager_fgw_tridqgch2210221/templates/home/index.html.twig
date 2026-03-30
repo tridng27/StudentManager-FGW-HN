@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Home - Student Manager{% endblock %}
+
+{% block body %}
+    <div class="card">
+        <h1>Welcome to Student Manager</h1>
+        <p>
+            A comprehensive student management system built with Symfony and API Platform.
+        </p>
+        
+        <h2>Quick Links</h2>
+        <a href="{{ path('student_index') }}" class="btn btn-primary">View Students</a>
+        <a href="{{ path('course_index') }}" class="btn btn-primary">View Courses</a>
+        <a href="{{ path('enrollment_index') }}" class="btn btn-primary">View Enrollments</a>
+        <a href="{{ path('grade_index') }}" class="btn btn-primary">View Grades</a>
+    </div>
+    
+    <div class="card">
+        <h2>About This System</h2>
+        <p>
+            This application allows educational institutions to manage their students, courses, and academic records.
+        </p>
+        
+        <h3>Features</h3>
+        <ul>
+            <li>Student registration and management</li>
+            <li>Course creation and scheduling</li>
+            <li>Course enrollment tracking</li>
+            <li>Grade recording and GPA calculation</li>
+            <li>RESTful API for integration</li>
+            <li>Responsive web interface</li>
+        </ul>
+    </div>
+{% endblock %}

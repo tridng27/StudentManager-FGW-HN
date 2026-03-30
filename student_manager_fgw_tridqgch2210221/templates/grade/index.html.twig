@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Grades - Student Manager{% endblock %}
+
+{% block body %}
+    <h1>Grades</h1>
+    
+    <a href="{{ path('grade_new') }}" class="btn btn-success">+ Record New Grade</a>
+    
+    {% if grades|length > 0 %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th>Course</th>
+                    <th>Score</th>
+                    <th>Grade</th>
+                    <th>Date Recorded</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for grade in grades %}
+                    <tr>
+                        <td><a href="{{ path('grade_by_student', {'id': grade.student.id}) }}">{{ grade.student.fullName }}</a></td>
+                        <td>{{ grade.course.title }}</td>
+                        <td>{{ grade.score }}/100</td>
+                        <td>
+                            <strong>{{ grade.gradeLetter }}</strong>
+                        </td>
+                        <td>{{ grade.dateRecorded|date('M d, Y') }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No grades found. <a href="{{ path('grade_new') }}">Record one</a></p>
+    {% endif %}
+{% endblock %}

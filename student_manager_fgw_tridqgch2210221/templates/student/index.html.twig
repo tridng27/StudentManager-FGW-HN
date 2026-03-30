@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+
+{% block title %}All Students - Student Manager{% endblock %}
+
+{% block body %}
+    <h1>Students</h1>
+    
+    <a href="{{ path('student_new') }}" class="btn btn-success">+ Add New Student</a>
+    
+    {% if students|length > 0 %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>GPA</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                    <tr>
+                        <td><a href="{{ path('student_show', {'id': student.id}) }}">{{ student.fullName }}</a></td>
+                        <td>{{ student.user.email ?? 'N/A' }}</td>
+                        <td>{{ student.gpa ?? 'N/A' }}</td>
+                        <td>{{ student.status }}</td>
+                        <td>
+                            <a href="{{ path('student_edit', {'id': student.id}) }}" class="btn btn-primary">Edit</a>
+                            <form method="POST" action="{{ path('student_delete', {'id': student.id}) }}" style="display: inline;">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No students found. <a href="{{ path('student_new') }}">Create one</a></p>
+    {% endif %}
+{% endblock %}
