@@ -50,3 +50,9 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+# Documentation
+IMPLEMENTATION_GUIDE.md
+PROJECT_PLAN.md
+REQUIREMENTS_CHECKLIST.md
+TEAM_COORDINATION.md
