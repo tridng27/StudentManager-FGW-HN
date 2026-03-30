@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Form - Student Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="courses-form">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>📚 Student Manager</h1>
+            </div>
+            <button class="menu-toggle">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="students.html">Students</a>
+                <a href="courses.html" class="active">Courses</a>
+                <a href="enrollments.html">Enrollments</a>
+                <a href="grades.html">Grades</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="page-header">
+            <a href="courses.html" class="btn btn-secondary">← Back to Courses</a>
+            <h2>New Course</h2>
+        </div>
+
+        <!-- Form Card -->
+        <div class="card form-card">
+            <form id="courseForm" data-page="courses-form">
+                <div class="form-group">
+                    <label for="code">Course Code <span class="required">*</span></label>
+                    <input type="text" id="code" name="code" class="form-control" placeholder="e.g., CS101" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">Course Title <span class="required">*</span></label>
+                    <input type="text" id="title" name="title" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" class="form-control" rows="4"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="credits">Credits <span class="required">*</span></label>
+                        <input type="number" id="credits" name="credits" class="form-control" min="1" max="12" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="capacity">Student Capacity <span class="required">*</span></label>
+                        <input type="number" id="capacity" name="capacity" class="form-control" min="1" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="instructor">Instructor</label>
+                        <input type="text" id="instructor" name="instructor" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="semester">Semester <span class="required">*</span></label>
+                        <select id="semester" name="semester" class="form-control" required>
+                            <option value="">Select Semester</option>
+                            <option value="Fall 2024">Fall 2024</option>
+                            <option value="Spring 2025">Spring 2025</option>
+                            <option value="Summer 2025">Summer 2025</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save Course</button>
+                    <a href="courses.html" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Student Manager</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

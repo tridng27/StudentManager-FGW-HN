@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Manager - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="index">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>📚 Student Manager</h1>
+            </div>
+            <button class="menu-toggle">☰</button>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="students.html">Students</a>
+                <a href="courses.html">Courses</a>
+                <a href="enrollments.html">Enrollments</a>
+                <a href="grades.html">Grades</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Welcome to Student Manager</h2>
+            <p>A comprehensive system for managing students, courses, and academic records</p>
+            <div class="btn-group">
+                <a href="students.html" class="btn btn-primary">Manage Students</a>
+                <a href="courses.html" class="btn btn-secondary">View Courses</a>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <h3>Quick Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👨‍🎓</div>
+                    <div class="stat-content">
+                        <div class="stat-value" data-stat="students">0</div>
+                        <div class="stat-label">Total Students</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📖</div>
+                    <div class="stat-content">
+                        <div class="stat-value" data-stat="courses">0</div>
+                        <div class="stat-label">Total Courses</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📝</div>
+                    <div class="stat-content">
+                        <div class="stat-value" data-stat="enrollments">0</div>
+                        <div class="stat-label">Total Enrollments</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <div class="stat-value" data-stat="grades">0</div>
+                        <div class="stat-label">Total Grades</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <h3>Key Features</h3>
+            <div class="features-grid">
+                <div class="card">
+                    <h4>Student Management</h4>
+                    <p>Add, edit, and manage student information including enrollment status and academic records.</p>
+                </div>
+
+                <div class="card">
+                    <h4>Course Management</h4>
+                    <p>Create and manage courses with capacity management and semester planning.</p>
+                </div>
+
+                <div class="card">
+                    <h4>Enrollment Tracking</h4>
+                    <p>Track student course enrollments and manage drops/withdrawals.</p>
+                </div>
+
+                <div class="card">
+                    <h4>Grade Recording</h4>
+                    <p>Record student grades with automatic letter grade calculation and GPA tracking.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Student Manager. Built with vanilla HTML5, CSS3, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

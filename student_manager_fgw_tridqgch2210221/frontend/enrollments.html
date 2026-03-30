@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollments - Student Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="enrollments">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>📚 Student Manager</h1>
+            </div>
+            <button class="menu-toggle">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="students.html">Students</a>
+                <a href="courses.html">Courses</a>
+                <a href="enrollments.html" class="active">Enrollments</a>
+                <a href="grades.html">Grades</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="page-header">
+            <h2>Enrollments</h2>
+            <a href="enrollments-form.html" class="btn btn-primary">+ New Enrollment</a>
+        </div>
+
+        <!-- Search/Filter Section -->
+        <div class="card search-card">
+            <div class="form-group">
+                <label for="search">Search Enrollments:</label>
+                <input type="text" id="search" placeholder="Search by student or course name..." class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="status-filter">Enrollment Status:</label>
+                <select id="status-filter" class="form-control">
+                    <option value="">All Status</option>
+                    <option value="enrolled">Enrolled</option>
+                    <option value="dropped">Dropped</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Enrollments Table -->
+        <div class="card table-card">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Course Title</th>
+                        <th>Enrollment Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 20px;">Loading...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Student Manager</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

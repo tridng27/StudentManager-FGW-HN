@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Student Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>📚 Student Manager</h1>
+            </div>
+            <button class="menu-toggle">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="students.html">Students</a>
+                <a href="courses.html">Courses</a>
+                <a href="enrollments.html">Enrollments</a>
+                <a href="grades.html">Grades</a>
+                <a href="about.html" class="active">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="page-header">
+            <h2>About Student Manager</h2>
+        </div>
+
+        <!-- About Section -->
+        <div class="card">
+            <h3>Project Overview</h3>
+            <p>
+                Student Manager is a comprehensive, modern web application designed to streamline the management
+                of students, courses, enrollments, and academic records in educational institutions.
+            </p>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="card">
+            <h3>Technology Stack</h3>
+            <div class="features-grid">
+                <div>
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li>✓ HTML5</li>
+                        <li>✓ CSS3 with CSS Variables</li>
+                        <li>✓ Vanilla JavaScript (ES6+)</li>
+                        <li>✓ Responsive Design</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Backend</h4>
+                    <ul>
+                        <li>✓ Symfony 8.0</li>
+                        <li>✓ PHP 8.4</li>
+                        <li>✓ API Platform</li>
+                        <li>✓ Doctrine ORM</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Database</h4>
+                    <ul>
+                        <li>✓ PostgreSQL 16</li>
+                        <li>✓ Relational Design</li>
+                        <li>✓ Data Integrity Constraints</li>
+                        <li>✓ Query Optimization</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Architecture</h4>
+                    <ul>
+                        <li>✓ REST API Architecture</li>
+                        <li>✓ Separation of Concerns</li>
+                        <li>✓ Client-Server Model</li>
+                        <li>✓ JSON Data Exchange</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Features -->
+        <div class="card">
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Student Management:</strong> Add, update, and manage student information with status tracking</li>
+                <li><strong>Course Management:</strong> Create and manage courses with capacity planning and semester organization</li>
+                <li><strong>Enrollment Tracking:</strong> Track student course enrollments with status management (enrolled, dropped, completed)</li>
+                <li><strong>Grade Recording:</strong> Record grades with automatic letter grade calculation</li>
+                <li><strong>GPA Calculation:</strong> Automatic GPA calculation based on recorded grades</li>
+                <li><strong>Responsive Design:</strong> Works seamlessly on desktop, tablet, and mobile devices</li>
+                <li><strong>RESTful API:</strong> Complete API endpoints for all operations via API Platform</li>
+                <li><strong>Data Validation:</strong> Comprehensive input validation and error handling</li>
+            </ul>
+        </div>
+
+        <!-- Architecture -->
+        <div class="card">
+            <h3>System Architecture</h3>
+            <p>
+                The Student Manager follows a modern client-server architecture with clear separation of concerns:
+            </p>
+            <ul>
+                <li><strong>Frontend Layer:</strong> Vanilla HTML5, CSS3, and JavaScript providing a responsive user interface</li>
+                <li><strong>API Layer:</strong> RESTful API built with Symfony and API Platform for data operations</li>
+                <li><strong>Business Logic:</strong> Repository pattern for data access and service classes for business logic</li>
+                <li><strong>Database Layer:</strong> PostgreSQL with Doctrine ORM for data persistence and integrity</li>
+            </ul>
+        </div>
+
+        <!-- Entity Relationships -->
+        <div class="card">
+            <h3>Data Model</h3>
+            <p>The system manages five core entities with the following relationships:</p>
+            <ul>
+                <li><strong>User:</strong> System authentication and authorization (base for Students)</li>
+                <li><strong>Student:</strong> Core student records with academic status (extends User)</li>
+                <li><strong>Course:</strong> Course catalog with capacity and semester information</li>
+                <li><strong>Enrollment:</strong> Junction table linking Students to Courses (many-to-many)</li>
+                <li><strong>Grade:</strong> Academic performance records for Students in Courses</li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="card alert alert-info">
+            <h3>Support & Documentation</h3>
+            <p>
+                For detailed documentation, setup instructions, and API reference, please refer to the
+                project documentation files in the repository root directory.
+            </p>
+        </div>
+
+        <!-- Version & License -->
+        <div class="card">
+            <h3>Project Information</h3>
+            <p>
+                <strong>Version:</strong> 1.0.0<br>
+                <strong>License:</strong> MIT<br>
+                <strong>Repository:</strong> StudentManager-FGW-HN<br>
+                <strong>Last Updated:</strong> 2024
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Student Manager. Built with vanilla HTML5, CSS3, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
